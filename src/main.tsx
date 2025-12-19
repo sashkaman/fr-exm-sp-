@@ -1,3 +1,5 @@
+// 10 10 exam questions
+
 // import { createRoot } from "react-dom/client"
 
 // #1
@@ -89,7 +91,7 @@
 // Answer with a space, for example: a={12} b={video.id} c={‘hello’}
 
 // #4
-
+// skipped question 4 here
 
 //#5
 // type News = {
