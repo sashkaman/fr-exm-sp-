@@ -1,343 +1,107 @@
-// 10 exam questions
+// 10 exam questions/ deleted on the 13th 
 // 27/12
-// EXAMS SP1-1W
+// EXAMS SP1
+// start file form 12/01/26
 
-import { createRoot } from "react-dom/client"
+// <!DOCTYPE html>
+// <html lang="en">
 
-const VideoHeader = (props: { videoName: string }) => {
-    return <div>😀 {props.videoName}</div>
-}
-const VideoContent = (props: { videoContent: string }) => {
-    return (
-        <div>
-            📼 <a href={props.videoContent}>{props.videoContent}</a>
-        </div>
-    )
-}
-const VideoDescription = (props: { videoDescription: string }) => {
-    return <div>📑 {props.videoDescription}</div>
-}
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Document</title>
+// </head>
 
-export const YoutubeVideo = (props: any) => {
-    return (
-        <div>
-            <VideoHeader title={videoName} />
-            <VideoContent title={videoContent} />
-            <VideoDescription title={VideoDescription} />
-        </div>
-    )
-}
+// <body>
+//     <!-- <input id="japan" value="it-incubator" />
+//     <script>
+//         const inputElement = document.xxx('japan');
+//         inputElement.value = '';
+//         /* Что нужно написать вместо XXX, чтобы значение в поле ввода зачищалось?
+//      ❗В качестве ответа укажите строчку целиком.  */
+//     </script> -->
 
-export const App = () => {
-    const video = {
-        title: "Samurai way",
-        link: "https://www.youtube.com/watch?v=gb7gMluAeao&list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8",
-        description: "Best free react-course",
-    }
-    return <YoutubeVideo video={video} />
-}
-createRoot(document.getElementById("root")!).render(<App />)
-// Что нужно написать вместо xxx yyy zzz, чтобы увидеть ожидаемый результат?
-// Ответ дайте через пробел, пример: a={12} b={video.id} c={'hello'}
+//     <!-- <input id="search" />
+//     <button id="find">find</button>
+//     <script>
+//         const searchInputElement = document.getElementById('search')
+//         const huntButtonElement = document.getElementById('find')
+//         huntButtonElement.addEventListener(click, () => {
+//             console.log(searchInputElement.value)
+//         })
+//         /*
+//         Что нужно написать внутри скобок вместо XXX и YYY, чтобы при нажатии на кнопку увидеть текст, введённый в input?
+//         Ответ дайте через пробел.
+//         Пример ответа: firstword secondword
+//         */
+//     </script> -->
 
 
-// old code
-// import { createRoot } from "react-dom/client"
-
-// #1
-// type UserProps = {
-//   name: string
-//   description: string
-// }
-// const User = (props: UserProps) => {
-//   return <div>
-//     <p>Имя: {props.name}</p>
-//     {/* //  <p>Описание: {'❗X'}</p>  */}
-//     <p>Описание: {props.description}</p>
-//   </div>
-// }
-// createRoot(document.getElementById("root")!).render(<User name={'John'} description={'lorem ipsum'} />)
-
-
-// #2
-// type UserWallet = {
-//   title: string
-//   amount: number
-// }
-// type UserWalletProps = {
-//   wallet: UserWallet
-// }
-// export const UserWallet = ({ wallet }: UserWalletProps) => {
-//   return (
-//     <p>
-//       title: {wallet.title}, amount: {wallet.amount}
-//     </p>
-//   )
-// }
-// export const UserMoney = () => {
-//   const wallets = [
-//     { title: "bitcoin", amount: 1 },
-//     { title: "$", amount: 100 },
-//   ]
-//   return (
-//     <div>
-//       <UserWallet wallet={wallets[0]} />
-//       <UserWallet wallet={wallets[1]} />
-//     </div>
-//   )
-// }
-// createRoot(document.getElementById("root")!).render(<UserMoney />)
-
-// What should be written instead of xxx and yyy so that the UserMoney component displays information about two wallets (bitcoin and $)?
-// Answer with a space, for example: props.x wallets
-
-// #3
-// const VideoHeader = (props: { videoName: string }) => {
-//   return <div>😀 {props.videoName}</div>
-// }
-
-// const VideoContent = (props: { videoContent: string }) => {
-//   return (
-//     <div>
-//       📼 <a href={props.videoContent}>{props.videoContent}</a>
-//     </div>
-//   )
-// }
-
-// const VideoDescription = (props: { videoDescription: string }) => {
-//   return <div>📑 {props.videoDescription}</div>
-// }
-
-// export const YoutubeVideo = (props: any) => {
-//   return (
-//     <div>
-//       <VideoHeader videoName={props.videoName} />
-//       <VideoContent videoContent={props.videoContent} />
-//       <VideoDescription videoDescription={props.videoDescription} />
-//     </div>
-//   )
-// }
-
-// export const App = () => {
-//   const video = {
-//     title: "Samurai way",
-//     link: "https://www.youtube.com/watch?v=gb7gMluAeao&list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8",
-//     description: "Best free react-course",
-//   }
-//   return <YoutubeVideo video={video} />
-// }
-
-// createRoot(document.getElementById("root")!).render(<App />)
-
-// What should be written instead of xxx yyy zzz to see the expected result?
-// Answer with a space, for example: a={12} b={video.id} c={‘hello’}
-
-// #4
-// skipped question 4 here
-
-//#5
-// type News = {
-//   title: string
-//   author: string
-// }
-// type Article = {
-//   title: string
-//   date: string
-//   text: string
-// }
-// type PageProps = {
-//   news: News[]
-//   mainArticle: Article
-// }
-
-// const Page = (props: PageProps) => {
-//   return (
-//     <div>
-
-//       <article>
-//         <h1>Название: {props.[1].title}</h1>
-//         <div>{props.[0].date}</div>
-//         <div>{props.[0].text}</div>
-//       </article>
-
-//       <aside>
-//         <h2>Articles:</h2>
-//         <ul>
-//           {props.news.map((n) => (
-//             <li>
-//               {n.title}, {n.author}
-//             </li>
-//           ))}
-//         </ul>
-//       </aside>
-
-//     </div>
-//   )
-// }
-
-// createRoot(document.getElementById("root")!).render(
-//   <Page
-//     news={[
-//       { author: "Ivanov", title: "news title 1" },
-//       { author: "Petrov", title: "news title 2" },
-//     ]}
-//     mainArticle={{ title: "article title 1", text: "text 1", date: "21.01.2001" }}
-//   />,
-// )
-// What should be written instead of XXX and YYY to display the data?
-// Answer with a space, for example: component props
+//     <!-- Чему равно значение св-ва age объекта user? -->
+//     <!-- <script>
+//         let user = { age: 0 };
+//         for (let i = 0; i < 10; i++) {
+//             user.age = i;
+//         }
+//     </script> -->
+//     <!-- 
+//     <script>
+//         let users = ['dimych', 'valera', 'artem', 'katya']
+//         yo();
+//         if (users.length > 4) {
+//             yo();
+//         } else {
+//         }
+//         if (users.length < 2 || window !== null) {
+//             yo()
+//         }
+//         for (let i = 0; i < 1; i++) {
+//             yo()
+//         }
+//         function yo() { }
+//     </script> -->
 
 
-//#6
-// App.tsx
-// export const YoutubeVideo = () => {
-//   return (
-//     <div>
-//       <VideoHeader />
-//       <VideoContent />
-//       <VideoStatistics />
-//     </div>
-//   )
-// }
+//     <!-- Что нужно написать внутри скобок вместо XXX, чтобы значение в поле ввода зачищалось? -->
+//     <!-- <input id="case" value="it-incubator" />
+//     <script>
+//         const searchInputElement = document.querySelector(xxx);
+//         searchInputElement.value = '';
 
-// // Folder components
-// const VideoHeader = () => {
-//   return <div>😀 Заголовок видео</div>
-// }
+//         /*
+//         Что нужно написать внутри скобок вместо XXX, чтобы значение в поле ввода зачищалось?
+//         */
+//     </script> -->
 
-// const VideoContent = () => {
-//   return <div>📼 Контент видео</div>
-// }
+//     <!-- Что минимальное забыли написать внутри функции removeWhitespaces, чтобы в консоли увидеть 'you_are_JS_developer'
+//     вместо
+//     undefined? -->
 
-// const VideoStatistics = () => {
-//   return <div>📊 Статистика лайков</div>
-// }
+//     <!-- <script>
+//         function removeWhitespaces(string) {
+//             string.split(' ').filter(s => s !== '').join('_')
+//         }
+//         console.log(removeWhitespaces('you are JS developer'))
+//     </script> -->
 
-// // createRoot(document.getElementById("root")!).render(<div>!!x</div>)
 
-// createRoot(document.getElementById("root")!).render(<YoutubeVideo />)
-// Что нужно написать вместо ❗X, чтобы на экране увидеть:
-// 😀 Video title
-// 📼 Video content
-// 📊 Like statistics
-// ❗ Respond with the minimum amount of code possible
+//     <!-- Что нужно написать вместо XXX, чтобы добавить в массив значение 'react'? -->
+//     <!-- <script>
+//         let skills = ['css', 'html', 'js'];
+//         skills.xxx('react');
+//         console.log(skills);
+//     </script> -->
 
-// #7
-// const CrazyButton = (props: any) => {
-//   const style = {
 
-//     // color: props.xxx,
-//     color: props.fontColor,
-//     // backgroundColor: props.yyy,
-//     backgroundColor: props.bgColor,
-//   }
+//     <!-- Чему равно значение свойства name объекта user? -->
+//     <!-- <script>
+//         let user = {
+//             name: 'samurai',
+//             age: 18
+//         }
+//         let user2 = user;
+//         user2.name = 'ninja';
+//     </script> -->
+// </body>
 
-//   // return <button style={style}>{props.zzz}</button>
-//   return <button style={style}>{props.title}</button>
-// }
-
-// export const App = () => {
-//   return (
-//     <div>
-//       <CrazyButton title={"delete"} fontColor={"white"} bgColor={"red"} />
-//       <CrazyButton title={"add"} fontColor={"white"} bgColor={"green"} />
-//     </div>
-//   )
-// }
-
-// createRoot(document.getElementById("root")!).render(<App />)
-
-// What should be written instead of XXX YYY ZZZ? Answer with a space.
-
-//#8
-// const Son = (props: any) => {
-//   return <div>I am son. My name is {props.name}</div>
-// }
-
-// const Father = (props: any) => {
-//   return (
-//     <div>
-//       I am father. My name is {props.name}
-//       <Son name={props.sonName} />
-//     </div>
-//   )
-// }
-
-// const Granny = (props: any) => {
-//   return (
-//     <div>
-//       I am granny. My name is {props.name}
-//       <Father name={props.fatherName} sonName={props.sonName} />
-//     </div>
-//   )
-// }
-
-// export const App = () => {
-//   return (
-//     <div>
-//       <Granny xxx={"Бабуля"} yyy={"Батя"} zzz={"Сын"} />
-//       <Granny name={"Бабуля"} fatherName={"Батя"} sonName={"Сын"} />
-//     </div>
-//   )
-// }
-
-// createRoot(document.getElementById("root")!).render(<App />)
-
-// What should be written instead of XXX YYY ZZZ? Answer with a space.
-
-//#9
-// import React from "react";
-
-// type PagePropsType = {
-//   age: number
-//   name: string
-//   avatarUrl: string
-// }
-
-// type UserPropsType = {
-//   a: number
-//   n: string
-// }
-
-// const Page: React.FC<PagePropsType> = (props) => {
-//   return <User a={props.age} n={props.name} />
-// }
-
-// export const User: React.FC<UserPropsType> = (props) => {
-//   return <div>name: {props.n}, age: {props.a}</div>
-// }
-
-// const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
-// root.render(
-//   <Page age={40} name="Brendan" avatarUrl={"test"} />
-// );
-
-// What should be written instead of xxx and yyy?
-// Answer with a space, for example: blabla onClick(props)
-
-//#10
-// type Props = {
-//   city: string // 'Minsk'
-//   country: string // 'Belarus'
-//   coords?: string // '53.917501,27.604851'
-// }
-
-// App.tsx
-// const App = () => {
-//   // return <Component city="Minsk" />
-//   return <Component city="Minsk" country="Belarus" coords='53.917501,27.604851' />
-// }
-
-// // Component.tsx (folder)
-// const Component = ({ city, country, coords }: Props) => {
-//   return (
-//     <div>
-//       <p>{city}</p>
-//       <p>{country}</p>
-//       <p>{coords}</p>
-//     </div>
-//   )
-// }
-// createRoot(document.getElementById("root")!).render(<App />)
-// What is the MINIMUM REQUIRED to add to line 10 (the line with the error) to eliminate the error?
-
+// </html>
