@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // sp1 - 2 useState onClick map filter
+=======
+sp1 - 2 useState onClick map filter
+>>>>>>> 8c02a565fac4b3aa7b634001faae2e4e5ea36085
 
 import { useState } from "react"
 import { createRoot } from "react-dom/client"
